@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', Arial;
+}
+
+
+@font-face {
+  font-family: "Outfit";
+  src: url(Outfit-VariableFont_wght.ttf);
+}
+
+
+
+body {
+    background: #b2d7f5;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s;
+    padding: 0 20px;
+}
+
+aside :first-child p {
+  background-color: rgb(31, 31, 31);
+  padding: 20px 22px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+section {
+    height: 500px;
+    max-width: 600px;
+}
+aside {
+  padding: 30px 0px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  z-index: 1;
+  background-color: #6582ff;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+
+#toggle-box {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.menu {
+  position: fixed;
+  top: 25px;
+  left: 20px;
+  
+}
+
+.dark {
+  padding: 13px;
+  background-color: #5271ff;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  position: fixed;
+  top: 25px;
+  right: 15px;
+
+}
+
+.rcol {
+  position: relative;
+}
+
+.save-box {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.save-btn {
+  padding: 8px 13px;
+  background-color: #5271ff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.5s, padding 0.3s;
+}
+
+.save-btn:hover {
+  padding: 8px 17px;
+}
+
+.save-btn:active {
+  opacity: 0.7;
+}
+
+
+.dark:hover {
+  background-color: black;
+}
+
+.dark:active {
+  opacity: 0.7;
+}
+
+.col {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 4px;
+    
+    padding: 5px;
+    box-shadow: #00000059 0px 5px 15px;
+}
+
+.head {
+  display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+}
+
+.box {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.first,.second,.third,.fourth {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first {
+  border-right: 2px solid #40576d33;
+}
+
+
+input[type=number] {
+    outline: none;
+    border: none;
+    width: 50px;
+    color: #131c35;
+    font-size: 24px;
+    padding: 10px 0px;
+    margin-left: 10px;
+}
+
+.second {
+    border-right: 2px solid #40576d33;
+}
+
+button {
+    border: none;
+    color: #131c35;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: transparent;
+    padding: 10px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+}
+
+button:hover {
+    background-color: #40576d1a;
+}
+
+button.active {
+    background-color: #73b1e333;
+    color: #5271ff;
+}
+
+.third {
+    border-right: 2px solid #40576d33;
+}
+
+.third button:focus {
+    background-color: #73b1e333;
+    color: #5271ff;
+}
+
+input[type=color] {
+    width: 35px;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+textarea {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    resize: vertical;
+}
+
+#toggle-menu {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+
+}
+
+#lines,
+#lines2,
+#lines3 {
+  height: 2px;
+  width: 20px;
+  background-color: black;
+  margin-bottom: 4px;
+}
+
+
+@media(max-width : 633px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .head {
+    grid-template-columns: 1fr 2.2fr 2.2fr;
+
+  }
+
+  .first {
+    justify-content: start;
+  }
+
+  .fourth {
+    display: none;
+  }
+
+  .third {
+    border: none;
+  }
+
+}
+
+
+@media(max-width : 456px) {
+
+  .col button i,
+  #font-size {
+    font-size: 16px;
+  }
+
+  #font-size {
+    margin: 0;
+    padding: 0;
+    width: 30px;
+  }
+
+  
+
+  .head {
+    grid-template-columns: 10% 1fr 1fr;
+
+  }
+
+}
+
+@media(max-width : 400px) {
+
+  .col button i,
+  #font-size {
+    font-size: 12px;
+  }
+
+  #font-size {
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    width: 20px;
+  }
+
+  .first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .head button {
+    padding: 8px 13px;  
+  }
+
+  
+
+  .head {
+    grid-template-columns: 10% 1fr 1fr;
+    padding: 0;
+
+  }
+
+}

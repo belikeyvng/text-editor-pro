@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor pro | Jesse Emmanuel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body id="dark">
+    <section onclick="closeNav()">
+        <div class="row">
+            <div class="col head">
+                <div class="first box">
+                    <input id="font-size" type="number" value="16" min="1" max="100" onchange="f1(this)">
+                </div>
+                <div class="second box">
+                    <button type="button" onclick="f2(this)">
+                        <i class="fa-solid fa-bold"></i>
+                    </button>
+                    <button type="button" onclick="f3(this)">
+                        <i class="fa-solid fa-italic"></i>
+                    </button>
+                    <button type="button" onclick="f4(this)">
+                        <i class="fa-solid fa-underline"></i>
+                    </button>
+                </div>
+                <div class="third box">
+                    <button type="button" onclick="f5(this)">
+                        <i class="fa-solid fa-align-left"></i>
+                    </button>
+                    <button type="button" onclick="f6(this)">
+                        <i class="fa-solid fa-align-center"></i>
+                    </button>
+                    <button type="button" onclick="f7(this)">
+                        <i class="fa-solid fa-align-right"></i>
+                    </button>
+                </div>
+                <div class="fourth box">
+                    <button type="button" onclick="f8(this)">aA</button>
+                    <button type="button" onclick="f9()">
+                        <i class="fa-solid fa-text-slash"></i>
+                    </button>
+                    <input type="color" onchange="f10(this)">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col rcol">
+                <form action="" method="put">
+                  <textarea id="textarea1" placeholder="Your text here "></textarea>
+                  <div class="save-box">
+                    <input type="submit" value="Save" class="save-btn" id="save-doc">
+                  </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <aside class="sidenav" id="mySidenav">
+      <div>
+        <p>
+          Your Documents
+        </p>
+      </div>
+    </aside>
+
+    <button class="menu" onclick="openNav()" id="toggle-menu">
+      <div id="lines"></div>
+      <div id="lines2"></div>
+      <div id="lines3"></div>
+    </button>
+
+    <input type="button" value="Toggle dark mode" class="dark" id="toggle-button" onclick="darkMode()">
+
+    <script src="app.js"></script>
+</body>
+
+</html>
