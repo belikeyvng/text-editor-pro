@@ -12,7 +12,6 @@
 }
 
 
-
 body {
     background: #b2d7f5;
     height: 100vh;
@@ -24,7 +23,11 @@ body {
     padding: 0 20px;
 }
 
-aside :first-child p {
+.noteHeader {
+  margin-top: 14px;
+}
+
+aside .noteHeader p {
   background-color: rgb(31, 31, 31);
   padding: 20px 22px;
   color: white;
@@ -38,12 +41,13 @@ section {
     max-width: 600px;
 }
 aside {
+  position: relative;
   padding: 30px 0px;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  width: 0px;
+  width: 280px;
   z-index: 1;
   background-color: #6582ff;
   transition: all 0.5s;
@@ -75,6 +79,7 @@ aside {
   right: 15px;
 
 }
+
 
 .rcol {
   position: relative;
@@ -146,6 +151,9 @@ aside {
   border-right: 2px solid #40576d33;
 }
 
+.noteTitle {
+  font-weight: bold;
+}
 
 input[type=number] {
     outline: none;
@@ -228,6 +236,197 @@ textarea {
 }
 
 
+
+.notes {
+  overflow-y: scroll;
+  max-height: calc(100vh - 100px);     
+}
+
+.c-note , .s-note{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.current-note ,.saved-note{
+ display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1rem;
+margin-bottom: 15px;
+cursor: pointer;
+border-radius: 15px;
+margin-right: 10px;
+margin-left: 10px;
+background-color:#ffffff;
+
+}
+#excerpt , .note-title h4{
+width: 2dvw;
+white-space: nowrap;
+}
+.note-title h4{
+font-weight:700;
+font-size: 1.17rem;
+margin-bottom: 0.3rem;
+}
+.note-title p{
+color: #666666;
+font-weight: 400;
+
+}
+.Date-Time{
+display: flex;
+align-items: center;
+margin-top: 0.5rem;
+
+
+}
+.Date-Time p{
+color: #000000;
+font-weight: 350;
+font-size: 0.92rem;
+}
+#Date{
+padding-left:3px;
+}
+.close-note{
+cursor: pointer;
+}
+
+
+.search-here{
+padding: 1rem;
+position:absolute;
+bottom: 0;
+left: 0;
+right: 0;
+width: auto;
+background-color: #242424;
+position: absolute;
+
+}
+
+.search-here input {
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+form{
+display: flex;
+align-items: center;
+}
+
+#searchbar{
+border: none;
+border-radius: 15px;
+position: relative;
+outline:none;
+padding: 13px 12px;
+width: 250px; 
+}
+
+#searchbar::placeholder{
+color: rgb(49, 49, 49);
+font-size: 16px;
+font-weight: 400;
+}
+
+.search-button button{
+padding: 0.2rem;
+margin-left: -0.1rem;
+cursor: pointer;
+}
+
+.single-note-div{
+display: flex;
+justify-content: center;
+padding-left: 20rem;
+
+}
+
+.close {
+position: relative;
+}
+
+#closeSidebar{
+position: absolute;
+top: -40px;
+right: -8px;
+color: black;
+font-size: 30px;
+font-weight: bold;
+transition: all 0.5s;
+}
+
+
+.s-note .close-note {
+margin-left: 70px;
+z-index: 2;
+}
+
+.s-note p,
+.c-note p {
+white-space: nowrap;
+}
+
+.c-note .close-note {
+margin-left: 20px;
+z-index: 2;
+}
+
+
+.title-div {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.single-note{
+width:75dvw;
+padding:1rem;
+border-radius: 0.3rem;
+box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.Snote-title input{
+font-weight: 500;
+font-size: 1.17rem;
+text-align: start;
+border: 1px solid #ffffff;
+padding: 10px 15px;
+background-color: white;
+width: 200px;
+text-align: center;
+border-radius: 0.2rem;
+margin-bottom: 20px;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.notes::-webkit-scrollbar {
+display: none;
+}
+
+.noteHeader {
+  margin-bottom: 30px;
+}
+
+.sideNote {
+  width: 100%;
+  height: 120px;
+  background-color: rgb(226, 233, 255);
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: 15px;
+}
+
+
+@media(max-width: 1100px) {
+  aside {
+    width: 0px;
+  }
+}
+
+
 @media(max-width : 633px) {
   body {
     padding-top: 60px;
@@ -250,8 +449,9 @@ textarea {
     border: none;
   }
 
-}
+ 
 
+}
 
 @media(max-width : 456px) {
 
